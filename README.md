@@ -4,4 +4,4 @@
 
 ### Screenshot
 
-<img src="media/ss.png"/>
+<img src="docs/media/ss.png"/>
