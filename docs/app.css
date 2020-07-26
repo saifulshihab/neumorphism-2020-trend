@@ -14,16 +14,31 @@ body {
   background: #e0e5ec;
 }
 .container h1 {
+  font-size: 2.5rem;
   width: 100%;
   border-radius: 10px;
   padding: 10px 20px;
   text-align: center;
-  color: rgb(82 82 82);
+  color: #e0e5ec;
   margin-bottom: 20px;
+  text-shadow: -3px -2px 5px #ffffff, 3px 2px 5px #a3b1c6;
   box-shadow: -4px -4px 16px #ffffff, 3px 3px 16px #a3b1c6;
 }
 .parent {
   margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  background: #e0e5ec;
+}
+.code {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: inset -4px -4px 16px #ffffff, inset 4px 4px 16px #aeaec0;
+}
+.code pre::selection {
+  background: rgb(82, 82, 82);
+  color: white;
 }
 .neu-1 {
   display: flex;
@@ -31,42 +46,35 @@ body {
   align-items: center;
   text-align: center;
   border-radius: 5px;
-  width: 200px;
-  height: 200px;
-  background: #e0e5ec;
   box-shadow: -4px -4px 16px #ffffff, 3px 3px 16px #a3b1c6;
 }
 .neu-1 i {
   font-size: 5rem;
-  color: rgb(253, 61, 61);
+  color: #2196f3;
+  background-size: cover;
+  text-shadow: -10px -10px 16px #ffffff, 2px 2px 16px #a3b1c6;
 }
 .neu-2 {
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  background: #e0e5ec;
   box-shadow: inset -5px -5px 16px #ffffff, inset 5px 5px 16px #aeaec0;
 }
 .neu-3 {
   border-radius: 5px;
-  width: 200px;
-  height: 200px;
-  background: #e0e5ec;
-  box-shadow: inset -4px -4px 16px #ffffff, inset 4px 4px 16px #aeaec0;
+  transform: rotate(45deg);
+  margin-top: 40px;
+  margin-bottom: 50px;
+  box-shadow: inset -4px -4px 10px #aeaec0, inset 4px 4px 30px #ffffff;
 }
 .neu-4 {
   display: flex;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
   justify-content: center;
   align-items: center;
-  background: #e0e5ec;
   position: relative;
   box-shadow: -4px -4px 16px #ffffff, 4px 4px 16px #aeaec0;
 }
 
-.neu-4:after {
+.neu-4::after {
   content: '';
   position: absolute;
   border-radius: 50%;
@@ -76,11 +84,17 @@ body {
   box-shadow: inset -4px -4px 16px #ffffff, inset 4px 4px 16px #aeaec0;
 }
 .neu-5 {
-  border-radius: 10px;
-  width: 200px;
-  height: 200px;
+  border-radius: 5px;
   margin-top: 40px;
-  background: #e0e5ec;
+  margin-bottom: 50px;
   box-shadow: -4px -4px 16px #ffffff, 3px 3px 16px #a3b1c6;
-  transform: rotate(45deg);
+  animation: rotate-animation infinite 20s linear;
+}
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
